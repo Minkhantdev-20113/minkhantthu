@@ -1,0 +1,75 @@
+termux-setup-storage
+pkg install android-tools
+cd /sdcard/Download/images
+
+echo " _ "
+echo " _ "
+echo "Your Current Directory is"
+pwd
+echo "
+
+Your Fastboot Files Are
+
+"
+ls
+echo " ........ "
+echo " ##################################################### "
+echo "              DEVELOPED BY MIN KHANT THU               "
+echo "              BUILD FOR TERMUX                         "
+echo "              20/11/2021     6:07PM                    "
+echo " ##################################################### "
+
+echo " Fastboot firmware flasher for termux "
+
+echo " _ "
+echo " _ "
+echo " _ "
+echo "<<1>>PROGRAM_________________________________RUNNING"
+echo "."
+echo "<<2>>COMMAND_________________________________RUNNING"
+echo " Erasing_____________________________ boot.img "
+fastboot erase boot
+echo " Flashing____________________________ logo "
+fastboot flash logo logo.bin
+echo " Flashing____________________________ tee1 "
+fastboot flash tee1 tee.img
+echo " Flashing____________________________ tee2 "
+fastboot flash tee12 tee.img
+echo " Flashing____________________________ scp1 "
+fastboot flash scp1 scp.img
+echo " Flashing____________________________ scp2 "
+fastboot flash scp2 scp.img
+echo " Flashing____________________________ sspm_1 "
+fastboot flash sspm_1 sspm.img
+echo " Flashing____________________________ sspm_2 "
+fastboot flash sspm_2 sspm.img
+echo " Flashing____________________________ super "
+fastboot flash super super.img
+echo " Flashing____________________________ cache "
+fastboot flash cache cache.img
+echo " Flashing____________________________ recovery "
+fastboot flash recovery recovery.img
+echo " Flashing____________________________ boot "
+fastboot flash boot boot.img
+echo " Flashing____________________________ dtbo "
+fastboot flash dtbo dtbo.img
+echo " Flashing____________________________ vbmeta "
+fastboot flash vbmeta vbmeta.img
+echo " Flashing____________________________ spmfw "
+fastboot flash spmfw spmfw.img
+echo " Flashing____________________________ md1img "
+fastboot flash md1img md1img.img
+echo " Flashing____________________________ vbmeta_system "
+fastboot flash vbmeta_system vbmeta_system.img
+echo " Flashing____________________________ vbmeta_vendor "
+fastboot flash vbmeta_vendor vbmeta_vendor.img
+echo " Flashing____________________________ cust "
+fastboot flash cust cust.img
+echo " Flashing____________________________ exaid "
+fastboot flash exaid exaid.img
+echo " Flashing____________________________ userdata "
+fastboot flash userdata userdata.img
+echo " Flashing____________________________finished "
+echo " Your device will reboot soon "
+fastboot reboot
+sleep 10s
